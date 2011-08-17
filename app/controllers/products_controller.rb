@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   # GET /products.xml
   def index
     @products = Product.all
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @products }
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
   # POST /products.xml
   def create
     @product = Product.new(params[:product])
-
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to(@product, :notice => 'Product was successfully created.') }
