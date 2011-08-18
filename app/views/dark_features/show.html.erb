@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Key:</b>
+  <%= @dark_feature.key %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%= @dark_feature.enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_dark_feature_path(@dark_feature) %> |
+<%= link_to 'Back', dark_features_path %>
