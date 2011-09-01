@@ -1,4 +1,5 @@
 class DarkFeaturesController < ApplicationController
+  before_filter :authorize
   # GET /dark_features
   # GET /dark_features.xml
   def index

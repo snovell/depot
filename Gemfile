@@ -7,6 +7,8 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 
+gem 'refinerycms', '= 1.0.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

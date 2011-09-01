@@ -10,7 +10,7 @@
 <body id="store">
   <%= dark_feature 'show_title' do %>
   <div id="banner">
-    <%= @page_title || "Catalog" %>
+    <%= @page_title || t('.title') %>
   </div>
   <% end %>
   <div id="columns">
@@ -27,6 +27,17 @@
 
       </div>
       <a href="http://107.20.219.127:3000/">Home</a><br/>
+
+      <% if session[:user_id] %>
+        <br />
+        <%= link_to 'Orders', orders_path %><br />
+        <%= link_to 'Products', products_path %><br />
+        <%= link_to 'Users', users_path %><br />
+        <%= link_to 'Dark Features', dark_features_path %><br />
+        <br />
+        <%= button_to 'Logout', logout_path, :method => :delete %>
+      <% end %>
+
     </div>
     <div id ="main">
 <%= yield %>
